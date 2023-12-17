@@ -1,4 +1,4 @@
-//DESAFIO:
+//DESAFIO-------------------------ATIVIDADE 1-----------------------------:
 //Escreva um algoritmo onde seu usuário deve informar nome, idade, peso, altura e profissão, 
 // a partir disso você deve exibir um texto com todas essas informações. 
 // Ex: Usuário inseriu nome: Giovanni, idade: 21, peso: 74kg, profissão: Programador, altura: 1.83, Você exibe: 
@@ -51,71 +51,114 @@
 // Utilizando o loop WHILE/DOWHILE, pergunte a seu usuário se ele deseja inserir novos dados ou se deseja 
 // finalizar o programa
 
+//-------------------------ATIVIDADE 1 RESOLUÇÃO-----------------------------
+
 //CRIANDO FUNCTION
 
-function inserirDados() {
-    // CRIANDO VARIAVEIS
+// function inserirDados() {
+//     // CRIANDO VARIAVEIS
+//     let nome = prompt("Digite seu nome")
+//     let idade = parseInt(prompt("Digite sua idade"))
+//     let peso = prompt("Digite seu peso em kg")
+//     let altura = prompt("Digite sua altura em metros")
+//     let profissao = prompt("Digite sua profisão")
+
+//     console.log("Olá " + nome + ", você tem " + idade + " anos, pesa " + peso + "Kg, tem " + altura + "m de altura, e trabalha como " + profissao)
+
+//     //VERIFICANDO IDADE
+
+//     if (idade >= 18) {
+//         console.log("Está liberado para tomar uma gelada.")
+//     } else {
+//         console.log("Sem gelada para você")
+//     }
+
+//     // DECOBRINDO IDADE FRACIONADA
+
+//     let meses = idade * 12
+//     let semanas = idade * 52
+//     let dias = idade * 365
+
+//     console.log("Sua idade em meses é: " + meses)
+//     console.log("Sua idade em semanas é: " + semanas)
+//     console.log("Sua idade em dias é: " + dias)
+
+//     //DESCOBRINDO O IMC
+
+//     let imc = peso / (altura * altura)
+
+//     if (imc < 18.5) {
+//         console.log("Seu IMC é: Magreza")
+//     } else if (imc >= 18.5 && imc <= 24.9) {
+//         console.log("Seu IMC é: Normal")
+//     } else if (imc >= 25 && imc <= 30) {
+//         console.log("Seu IMC é: Sobrepeso")
+//     } else {
+//         console.log("Seu IMC é: Obesidade")
+//     }
+
+//     // DESCOBRINDO ANO DE NASCIMENTO
+
+//     let anoAtual = 2023
+//     let anoNasc = anoAtual - idade
+//     console.log("Você nasceu no ano de " + anoNasc)
+
+//     //EXIBINDO ANOS E IDADES
+
+//     let anoVivido = anoNasc
+//     let idadeAtual = 0
+
+//     for (let anoVivido = anoNasc; anoVivido <= anoAtual; anoVivido++) {
+//         console.log(anoVivido + " - " + idadeAtual + " anos de idade")
+//         idadeAtual++
+//     }
+// }
+
+// //LOOP DOWHILE
+// do {
+//     inserirDados();
+//     //IINSERINDO LOGICA ANTERIOR
+//     var continuar = prompt("Deseja inserir os dados novamente? (s/n)")
+// } while (continuar == "s");
+
+//DESAFIO-------------------------ATIVIDADE 1-----------------------------:
+// Imagine que você trabalha num banco e sua missão é fazer um algoritmo para prever o aumento de salário de seus clientes.
+
+// 1 - Peça para seu cliente informar seu nome, idade e salário atual e exiba essas informações em tela.
+
+
+// 2 - Peça para que seu cliente confirme as informações, se ele informar que digitou errado, 
+// peça para colocar TODAS as informações novamente, repita as perguntas até o usuário informar que digitou as 
+// informações corretamente.
+
+// 3 - Faça a previsão do salário dele para os próximos 10 anos considerando que:
+
+//     - O cliente recebe anualmente aumento salarial. 
+
+//     - Sabe-se que: no primeiro ano, ele receberá um aumento de 1,5%, sobre o seu salário atual; 
+//     A partir do segundo ano, os aumentos salariais sempre corresponderam ao dobro do percentual do ano anterior. 
+//     Apresente todos os valores com o ano correspondente. Ex: 2024 - R$1600.
+
+//-------------------------ATIVIDADE 2 RESOLUÇÃO-----------------------------
+
+//CRIANDO VARIAVEIS/LOOP
+let confirmar = "n"
+let salarioAtual
+while (confirmar != "s") {
     let nome = prompt("Digite seu nome")
     let idade = parseInt(prompt("Digite sua idade"))
-    let peso = prompt("Digite seu peso em kg")
-    let altura = prompt("Digite sua altura em metros")
-    let profissao = prompt("Digite sua profisão")
-
-    console.log("Olá " + nome + ", você tem " + idade + " anos, pesa " + peso + "Kg, tem " + altura + "m de altura, e trabalha como " + profissao)
-
-    //VERIFICANDO IDADE
-
-    if (idade >= 18) {
-        console.log("Está liberado para tomar uma gelada.")
-    } else {
-        console.log("Sem gelada para você")
-    }
-
-    // DECOBRINDO IDADE FRACIONADA
-
-    let meses = idade * 12
-    let semanas = idade * 52
-    let dias = idade * 365
-
-    console.log("Sua idade em meses é: " + meses)
-    console.log("Sua idade em semanas é: " + semanas)
-    console.log("Sua idade em dias é: " + dias)
-
-    //DESCOBRINDO O IMC
-
-    let imc = peso / (altura * altura)
-
-    if (imc < 18.5) {
-        console.log("Seu IMC é: Magreza")
-    } else if (imc >= 18.5 && imc <= 24.9) {
-        console.log("Seu IMC é: Normal")
-    } else if (imc >= 25 && imc <= 30) {
-        console.log("Seu IMC é: Sobrepeso")
-    } else {
-        console.log("Seu IMC é: Obesidade")
-    }
-
-    // DESCOBRINDO ANO DE NASCIMENTO
-
-    let anoAtual = 2023
-    let anoNasc = anoAtual - idade
-    console.log("Você nasceu no ano de " + anoNasc)
-
-    //EXIBINDO ANOS E IDADES
-
-    let anoVivido = anoNasc
-    let idadeAtual = 0
-
-    for (let anoVivido = anoNasc; anoVivido <= anoAtual; anoVivido++) {
-        console.log(anoVivido + " - " + idadeAtual + " anos de idade")
-        idadeAtual++
-    }
+    salarioAtual = parseInt(prompt("Digite seu salário atual"))
+    console.log("nome: " + nome + ", idade: " + idade + ", salário atual: " + salarioAtual)
+    confirmar = prompt("As informações estão Corretas? (s/n)")
 }
 
-//LOOP DOWHILE
-do {
-    inserirDados();
-    //IINSERINDO LOGICA ANTERIOR
-    var continuar = prompt("Deseja inserir os dados novamente? (s/n)")
-} while (continuar == "s");
+//FAZENDO A PREVISÃO DO SALÁRIO
+let aumento = 0.015
+console.log("Previsão salarial  para os próximos 10 anos: ")
 
+for (let ano = 1; ano <= 10; ano++) {
+    salarioAtual += salarioAtual * aumento + aumento
+    aumento *= 2
+
+    console.log((2023 + ano) + " = R$ " + salarioAtual)
+}
